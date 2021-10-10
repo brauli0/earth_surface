@@ -7,14 +7,14 @@ Build image:
 docker build -t earthsurface .
 ```
 
-Run container:
+Run container (and wait a few seconds):
 ```
-docker run -p 8080:8080 -d --name server earthsurface
+docker run -p 80:80 -d --name server earthsurface
 ```
 
 Test it:
 ```
-curl "http://localhost:8080/getsurface?lat=42.985699&lon=-7.837807"
+curl "http://localhost/getsurface?lat=42.985699&lon=-7.837807"
 ```
 
 Stop container:

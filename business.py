@@ -45,4 +45,4 @@ class EarthSurface:
 
 class Business:
     def hello_world():
-        return 'Hello world!'
+        return 'Hello world! - This is my awesome API to know if a point is land or water'

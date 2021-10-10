@@ -4,7 +4,7 @@ from business import Business, EarthSurface
 
 app = Flask(__name__)
 
-@app.route('/helloworld')
+@app.route('/')
 def hello_world():
    return Business.hello_world()
 
@@ -31,4 +31,4 @@ def get_surface():
 # curl "http://localhost/getsurface?lat=42.985699&lon=-7.837807"
 
 if __name__ == '__main__':
-   app.run(debug=True, host="0.0.0.0", port=8080)
+   app.run(debug=True, host="0.0.0.0", port=80)
