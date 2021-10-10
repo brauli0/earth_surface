@@ -1,12 +1,7 @@
-FROM ubuntu:latest
+FROM python:3.9-slim
 
-WORKDIR /home
 COPY . ./
-RUN apt update -y
-RUN apt upgrade -y
-RUN apt install python3 -y
-RUN apt install python3.8-venv -y
 
-EXPOSE 80/tcp
+RUN pip install Flask flask-restful gunicorn numpy
 
-CMD bin/run.sh
+CMD exec gunicorn --bind :8080 app:app
